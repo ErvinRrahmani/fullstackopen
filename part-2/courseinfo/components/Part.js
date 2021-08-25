@@ -1,10 +1,10 @@
 const Part = ({ parts }) => {
   return (
     <div>
-      {parts.map((el, i) => {
+      {parts?.map((el, i) => {
         return (
           <li>
-            {el?.name} {el?.exercises}
+            {el.name} {el.exercises}
           </li>
         );
       })}
