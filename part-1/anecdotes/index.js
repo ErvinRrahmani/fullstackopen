@@ -12,7 +12,6 @@ const Anecdote = ({text, votesCount}) => {
   )
 }
 
-
 const Button = ({onClick, text}) => {
   return (
     <div>
@@ -40,11 +39,9 @@ const Winner = ({anecdotes, allVotes}) => {
 }
 
   const App = ({anecdotes}) => {
-
     
     const [selected, setSelected] = useState(0)
     const [votes, setAllVotes] = useState(Array(6).fill(0))
-
 
     const handleVoteClick = () => {
       const newAllVotes = [...votes];
@@ -52,13 +49,10 @@ const Winner = ({anecdotes, allVotes}) => {
       setAllVotes(newAllVotes)
     }
 
-
-
     const generateRandoms = () => {
       let randomNumber = Math.floor(Math.random() * anecdotes.length) 
       setSelected(randomNumber);
     }
-
 
     return (
       <div>
@@ -84,8 +78,6 @@ const Winner = ({anecdotes, allVotes}) => {
 
 ReactDOM.render(
     <App anecdotes={anecdotes}/>,
-
   document.getElementById('root')
 );
-
 
